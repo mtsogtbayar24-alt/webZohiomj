@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab4</title>
+<style>
+.head{
+background:#13CCE8;
+color:white;
+text-align:center;
+padding:20px;
+}
+.container{
+display:flex;
+width: 100%;
+min-height: 600px;
+}
+main{
+flex: 6;
+padding:20px;
+background-color: #09EB85;
+overflow: hidden;
+}
+section{
+flex: 4;
+background:#09EBB6;
+padding:20px;
+}
+.foot{
+background:#1376E8;
+color:white;
+text-align:center;
+padding:10px;
+width: 100%
+}
+video, canvas, svg{
+max-width: 100%;
+height: auto;
+display: block;
+margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="head">
+<h3>Энэ бол толгой хэсэг ( Даалгавар№1-Дуу )</h3>
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+Таны хөтөч аудиог дэмжихгүй байна.
+</audio>
+</div>
+</header>
+<div class="container">
+<main>
+<h5>Энэ бол үндсэн хэсэг ( Даалгавар№2-Видео)</h5>
+<video controls poster="apple.jpg">
+<source src="video.mp4" type="video/mp4">
+</video>
+<h5>Энэ бол үндсэн хэсэг (Даалгавар№3-Сanvas)</h5>
+<canvas id="city" width="900" height="500"></canvas>
+<script>
+const canvas = document.getElementById('city');
+const ctx = canvas.getContext('2d');
+const W = 900, H = 500;
+//Тэнгэр
+ctx.fillStyle = '#29c5f6';
+ctx.fillRect(0, 0, W, H);
+//Нар
+ctx.beginPath();
+ctx.arc(820, 65, 48, 0, Math.PI*2);
+ctx.fillStyle = '#ffe600';
+ctx.fill();
+// Зорчигч зам
+ctx.fillStyle = '#7f8c8d'
+ctx.fillRect(0, 295, W, H);
+//Барилгууд
+//Барилга1
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(30, 90, 110, 215);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(30, 90, 110, 215);
+//Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(42, 102, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(90, 102, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(42, 152, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(90, 152, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(42, 202, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(90, 202, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(42, 252, 42, 44);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(90, 252, 42, 44);
+// Барилга 2
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(155, 165, 85, 140);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(155, 165, 85, 140);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(165, 177, 28, 32);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(199, 177, 28, 32);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(165, 215, 28, 32);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(199, 215, 28, 32);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(165, 253, 28, 32);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(199, 253, 28, 32);
+// Барилга 3
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(255, 45, 120, 260);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(255, 45, 120, 260);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(267, 57, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(315, 57, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(267, 103, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(315, 103, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(267, 149, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(315, 149, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(267, 195, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(315, 195, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(267, 241, 42, 40);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(315, 241, 42, 40);
+// Барилга 4
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(390, 190, 90, 115);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(390, 190, 90, 115);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(401, 202, 30, 30);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(437, 202, 30, 30);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(401, 238, 30, 30);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(437, 238, 30, 30);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(401, 274, 30, 30);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(437, 274, 30, 30);
+// Барилга 5
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(495, 80, 110, 225);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(495, 80, 110, 225);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(507, 92, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(551, 92, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(507, 136, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(551, 136, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(507, 180, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(551, 180, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(507, 224, 38, 38);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(551, 224, 38, 38);
+// Барилга 6
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(620, 130, 90, 175);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(620, 130, 90, 175);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(631, 142, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(667, 142, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(631, 182, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(667, 182, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(631, 222, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(667, 222, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(631, 262, 30, 34);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(667, 262, 30, 34);
+// Барилга 7
+ctx.fillStyle = '#1a5276';
+ctx.fillRect(725, 90, 110, 215);
+ctx.strokeStyle = '#154360';
+ctx.lineWidth = 2;
+ctx.strokeRect(725, 90, 110, 215);
+// Цонх
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(737, 102, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(781, 102, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(737, 150, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(781, 150, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(737, 198, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(781, 198, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(737, 246, 38, 42);
+ctx.fillStyle = '#d5d8dc'; ctx.fillRect(781, 246, 38, 42);
+// Явган зорчигчийн зам
+ctx.fillStyle = '#27ae60';
+ctx.fillRect(0, 323, W, 20);
+//Машин зам
+ctx.fillStyle = '#111';
+ctx.fillRect(0, 342, W, 120);
+// Машин замын цагаан шугам
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(70, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(150, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(220, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(300, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(380, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(450, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(520, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(600, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(680, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(750, 395, 50, 10);
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(850, 395, 50, 10);
+// Явган зорчигчийн зам
+ctx.fillStyle = '#27ae60';
+ctx.fillRect(0, 460, W, 20);
+// Машин 1
+ctx.fillStyle = '#7ec8e3';
+ctx.beginPath(); ctx.roundRect(20, 355, 145, 62, 8); ctx.fill();
+ctx.fillStyle = '#7ec8e3';
+ctx.beginPath(); ctx.roundRect(85, 330, 72, 28, [6,6,0,0]); ctx.fill();
+ctx.fillStyle = '#b0bec5';
+ctx.beginPath(); ctx.roundRect(88, 333, 63, 22, 4); ctx.fill();
+ctx.beginPath(); ctx.arc(48,  417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(48,  417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+ctx.beginPath(); ctx.arc(137, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(137, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+// Машин 2
+ctx.fillStyle = '#8bc34a';
+ctx.beginPath(); ctx.roundRect(250, 355, 145, 62, 8); ctx.fill();
+ctx.fillStyle = '#8bc34a';
+ctx.beginPath(); ctx.roundRect(315, 330, 72, 28, [6,6,0,0]); ctx.fill();
+ctx.fillStyle = '#b0bec5';
+ctx.beginPath(); ctx.roundRect(318, 333, 63, 22, 4); ctx.fill();
+ctx.beginPath(); ctx.arc(278, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(278, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+ctx.beginPath(); ctx.arc(367, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(367, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+// Машин 3
+ctx.fillStyle = '#e07030';
+ctx.beginPath(); ctx.roundRect(460, 355, 145, 62, 8); ctx.fill();
+ctx.fillStyle = '#e07030';
+ctx.beginPath(); ctx.roundRect(525, 330, 72, 28, [6,6,0,0]); ctx.fill();
+ctx.fillStyle = '#b0bec5';
+ctx.beginPath(); ctx.roundRect(528, 333, 63, 22, 4); ctx.fill();
+ctx.beginPath(); ctx.arc(488, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(488, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+ctx.beginPath(); ctx.arc(577, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(577, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+// Машин 4
+ctx.fillStyle = '#2e7d32';
+ctx.beginPath(); ctx.roundRect(700, 355, 145, 62, 8); ctx.fill();
+ctx.fillStyle = '#2e7d32';
+ctx.beginPath(); ctx.roundRect(765, 330, 72, 28, [6,6,0,0]); ctx.fill();
+ctx.fillStyle = '#b0bec5';
+ctx.beginPath(); ctx.roundRect(768, 333, 63, 22, 4); ctx.fill();
+ctx.beginPath(); ctx.arc(728, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(728, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+ctx.beginPath(); ctx.arc(817, 417, 21, 0, Math.PI*2); ctx.fillStyle='#111'; ctx.fill();
+ctx.beginPath(); ctx.arc(817, 417, 9,  0, Math.PI*2); ctx.fillStyle='#555'; ctx.fill();
+</script>
+</main>
+<section>
+<h5>Энэ бол баруун талын хэсэг( Даалгавар№4-SVG )</h5>
+<svg width="100%" viewBox="0 0 400 600">
+<!-- Тэнгэр -->
+<rect x="0" y="0" width="400" height="280" fill="#29c5f6"/>
+<!-- Нар -->
+<circle cx="60" cy="55" r="40" fill="#ffe600" stroke="#ffc300" stroke-width="2"/>
+<!-- Үүл 1 -->
+<ellipse cx="160" cy="70" rx="25" ry="17" fill="white"/>
+<ellipse cx="183" cy="58" rx="20" ry="15" fill="white"/>
+<ellipse cx="205" cy="68" rx="25" ry="17" fill="white"/>
+<rect x="135" y="65" width="95" height="22" fill="white"/>
+<!-- Үүл 2 -->
+<ellipse cx="290" cy="50" rx="22" ry="15" fill="white"/>
+<ellipse cx="310" cy="38" rx="18" ry="13" fill="white"/>
+<ellipse cx="330" cy="48" rx="22" ry="15" fill="white"/>
+<rect x="268" y="45" width="84" height="20" fill="white"/>
+<!-- Уул арын эгнээ -->
+<polygon points="0,280   80,120  160,280" fill="#7b4a1e"/>
+<polygon points="80,280  170,95  260,280" fill="#7b4a1e"/>
+<polygon points="200,280 300,105 400,280" fill="#7b4a1e"/>
+<polygon points="290,280 380,130 400,280" fill="#7b4a1e"/>
+<!-- Уул урд эгнээ -->
+<polygon points="0,280   70,160  155,280" fill="#8b5e2a"/>
+<polygon points="100,280 210,140 320,280" fill="#8b5e2a"/>
+<polygon points="250,280 350,155 400,280" fill="#8b5e2a"/>
+<!-- Газар -->
+<rect x="0" y="280" width="400" height="320" fill="#4caf50"/>
+<!-- ГОЛ -->
+<path d="M0,295 C15,310 25,330 30,360 C35,390 20,430 15,470 C8,510 5,540 0,600 L0,280 Z"
+      fill="#2196f3"/>
+<!-- ХОНИН СҮРЭГ -->
+<ellipse cx="100" cy="320" rx="18" ry="12" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="119" cy="314" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="121" cy="312" r="2" fill="#111"/>
+<line x1="92"  y1="331" x2="92"  y2="343" stroke="#555" stroke-width="2"/>
+<line x1="100" y1="331" x2="100" y2="343" stroke="#555" stroke-width="2"/>
+<line x1="109" y1="331" x2="109" y2="343" stroke="#555" stroke-width="2"/>
+<ellipse cx="148" cy="310" rx="18" ry="12" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="167" cy="304" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="169" cy="302" r="2" fill="#111"/>
+<line x1="140" y1="321" x2="140" y2="333" stroke="#555" stroke-width="2"/>
+<line x1="148" y1="321" x2="148" y2="333" stroke="#555" stroke-width="2"/>
+<line x1="157" y1="321" x2="157" y2="333" stroke="#555" stroke-width="2"/>
+<ellipse cx="110" cy="355" rx="18" ry="12" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="129" cy="349" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="131" cy="347" r="2" fill="#111"/>
+<line x1="102" y1="366" x2="102" y2="378" stroke="#555" stroke-width="2"/>
+<line x1="110" y1="366" x2="110" y2="378" stroke="#555" stroke-width="2"/>
+<line x1="119" y1="366" x2="119" y2="378" stroke="#555" stroke-width="2"/>
+<ellipse cx="155" cy="345" rx="18" ry="12" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="174" cy="339" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="176" cy="337" r="2" fill="#111"/>
+<line x1="147" y1="356" x2="147" y2="368" stroke="#555" stroke-width="2"/>
+<line x1="155" y1="356" x2="155" y2="368" stroke="#555" stroke-width="2"/>
+<line x1="164" y1="356" x2="164" y2="368" stroke="#555" stroke-width="2"/>
+<ellipse cx="120" cy="390" rx="18" ry="12" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="139" cy="384" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+<circle cx="141" cy="382" r="2" fill="#111"/>
+<line x1="112" y1="401" x2="112" y2="413" stroke="#555" stroke-width="2"/>
+<line x1="120" y1="401" x2="120" y2="413" stroke="#555" stroke-width="2"/>
+<line x1="129" y1="401" x2="129" y2="413" stroke="#555" stroke-width="2"/>
+<!-- ХҮН -->
+<circle cx="220" cy="318" r="18" fill="#ffe066" stroke="#c8960c" stroke-width="1.5"/>
+<circle cx="214" cy="314" r="2.5" fill="#333"/>
+<circle cx="226" cy="314" r="2.5" fill="#333"/>
+<path d="M213,324 Q220,331 227,324" stroke="#333" stroke-width="2" fill="none"/>
+<polygon points="220,336 192,405 248,405" fill="#7b1fa2"/>
+<line x1="212" y1="365" x2="182" y2="388" stroke="#ffe066" stroke-width="4"/>
+<line x1="228" y1="365" x2="258" y2="388" stroke="#ffe066" stroke-width="4"/>
+<line x1="208" y1="405" x2="208" y2="445" stroke="#c62828" stroke-width="5"/>
+<line x1="232" y1="405" x2="232" y2="445" stroke="#c62828" stroke-width="5"/>
+<!-- МАШИН -->
+<rect x="160" y="468" width="155" height="65" fill="#e07030" rx="5"/>
+<rect x="315" y="483" width="60" height="50" fill="#e07030" rx="4"/>
+<rect x="320" y="490" width="48" height="28" fill="#b0bec5" rx="3"/>
+<circle cx="200" cy="538" r="22" fill="#212121"/>
+<circle cx="200" cy="538" r="9"  fill="#555"/>
+<circle cx="350" cy="538" r="22" fill="#212121"/>
+<circle cx="350" cy="538" r="9"  fill="#555"/>
+<!-- ГЭР -->
+<!-- Байшин -->
+<!-- Ханын хэсэг -->
+<rect x="40" y="420" width="110" height="85" fill="#F8FA87" stroke="#90a4ae" stroke-width="1.5"/>
+<polygon points="35,420 95,380 155,420" fill="#BD6B00" stroke="#90a4ae" stroke-width="1.5"/>
+<rect x="60" y="445" width="25" height="25" fill="#37474f" stroke="#546e7a" stroke-width="1.5"/>
+<rect x="105" y="445" width="25" height="25" fill="#37474f" stroke="#546e7a" stroke-width="1.5"/>
+<rect x="85" y="470" width="25" height="35" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+<line x1="97" y1="470" x2="97" y2="505" stroke="#333" stroke-width="1.5"/>
+</svg>
+</section>
+</div>
+<footer>
+<div class="foot">
+<h2>Энэ бол хөл хэсэг</h2>
+</div>
+</footer>
+</body>
+</html>

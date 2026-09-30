@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сэмжид Рашаан Сувилал</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header_style.css">
+    <link rel="stylesheet" href="footer_style.css">
+
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            color: #475569;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 96%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 96%;
+            }
+        }
+        .about-section {
+            background-color: #fff;
+            padding: 5rem 1.5rem;
+        }
+
+        .about-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+        }
+
+        @media(min-width:1024px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 480px) {
+            .about-images {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .image-large {
+            grid-column: span 2;
+            height: 14rem;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .image-small {
+            height: 10rem;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .image-large img,
+        .image-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+
+<div class="container">
+
+<header>
+    <div class="top-row">
+        <h6>Жилийн 4 улиралд нээлттэй · Өвөрхангай аймаг, Хужирт сум</h6>
+        <h6>8802-1191, 7202-1191</h6>
+    </div>
+</header>
+
+<nav class="main-header">
+    <div class="main-header-1">
+        <a class="main-header-2" href="/">
+            <div class="main-header-logo">
+                <img src="image.png">
+            </div>
+            <div>
+                <div class="main-header-logo-text-1">Сэмжид Хужирт</div>
+                <div class="main-header-logo-text-2">Рашаан Сувилал</div>
+            </div>
+        </a>
+
+        <div class="main-header-menu">
+            <a class="main-header-menu-item" href="/">Нүүр</a>
+            <a class="main-header-menu-item-disabled" href="#">Бидний тухай</a>
+            <a class="main-header-menu-item-disabled" href="#">Байр, өрөө</a>
+            <a class="main-header-menu-item-disabled" href="#">Эмчилгээ</a>
+
+            <div class="main-header-menu-language">
+                <button class="main-header-menu-language-btn1">MN</button>
+                <button class="main-header-menu-language-btn2">EN</button>
+            </div>
+
+            <a class="main-header-menu-last-item" href="#">Захиалга</a>
+        </div>
+    </div>
+</nav>
+
+<!-- STATS -->
+<section style="padding: 2rem 1.5rem;">
+    <div class="stats-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <div>2003<br>Үүссэн он</div>
+        <div>50+<br>Ажилтан</div>
+        <div>250<br>Багтаамж</div>
+        <div>380км<br>Зай</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+    <div class="about-grid">
+
+        <div class="about-images">
+            <div class="image-large">
+                <img src="resort-building.png">
+            </div>
+            <div class="image-small">
+                <img src="resort-nature.png">
+            </div>
+            <div class="image-small">
+                <img src="therapy-mud.png">
+            </div>
+        </div>
+
+        <div class="about-content">
+            <span class="badge">Бидний тухай</span>
+            <h2>Сэмжид Хужирт Рашаан Сувилал</h2>
+            <div class="about-text">
+                <p>Сэмжид Хужирт рашаан сувилал нь анх 2003 онд байгуулагдсан Монголын анхны хувийн сувиллуудын нэг юм.</p>
+                <p>Дэлхийн соёлын өвд бүртгэгдсэн Орхон голын сав газар, эртний Хархорин, Эрдэнэзуу хийд, Төвхөн хийд, Шанх хийд, Улаан цутгалан зэрэг байгалийн үзэсгэлэнт газруудтай ойролцоо байрладаг.</p>
+                <p>«Хужиртын хөх сувд» халуун рашаан, «Хужиртын хар сувд» эмчилгээний шавраар голлон эмчилгээ хийхийн сацуу европ болон монгол уламжлалт эмчилгээнүүдийг хийдэг.</p>
+                <p>Нарийн мэргэжлийн эмч болон үйлчилгээний 50 гаруй ажилтантай. Өвлийн улиралд 180, зуны улиралд 250 гаруй зочин нэгэн зэрэг хүлээн авах хүчин чадалтай.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">2003</div>
+                    <div class="stat-label">Үүссэн он</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Мэргэжилтэн</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">250</div>
+                    <div class="stat-label">Зочны багтаамж</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4×</div>
+                    <div class="stat-label">Улирал нээлттэй</div>
+                </div>
+            </div>
+            <div class="about-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                </svg>
+                <span>Улаанбаатараас 380 км. Хатуу хучилттай засмал замаар холбогдсон. Жилийн 4 улиралд нээлттэй.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<footer class="footer-start">
+    <div class="footer-2">
+        <!-- 1-р багана -->
+        <div>
+            <div class="footer-3">
+                <div class="footer-logo">
+                    <img alt="Logo" loading="lazy" decoding="async" data-nimg="fill" class="object-contain"
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                        sizes="100vw" src="image.png">
+                </div>
+                <div>
+                    <div class="title1">Сэмжид Хужирт</div>
+                    <div class="title2">РАШААН СУВИЛАЛ</div>
+                </div>
+            </div>
+            <p class="desc-text">Монголын анхны хувийн рашаан сувилал. Орхон голын хөндий, Хужирт сум.</p>
+        </div>
+        <!-- 2-р багана -->
+        <div>
+            <h4 class="label-small">Цэс</h4>
+            <ul class="clean-list">
+                <li><a class="footer-link" href="/">Нүүр</a></li>
+                <li><a class="footer-link" href="/about">Бидний тухай</a></li>
+                <li><a class="footer-link" href="/rooms">Байр, өрөө</a></li>
+                <li><a class="footer-link" href="/services">Эмчилгээ</a></li>
+                <li><a class="footer-link" href="/booking">Захиалга</a></li>
+            </ul>
+        </div>
+        <!-- 3-р багана -->
+        <div>
+            <h4 class="label-small">Холбоо барих</h4>
+            <ul class="clean-list">
+                <li class="info-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin icon-pin">
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="body-small">Өвөрхангай аймаг, Хужирт сум</span>
+                </li>
+                <li class="contact-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone icon-phone">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div>
+                        <a href="tel:88021191" class="contact-link">8802-1191</a>
+                        <a href="tel:72021191" class="contact-link">7202-1191</a>
+                    </div>
+                </li>
+                <li class="footer-note">Билет: 9011-5757, 8802-2304</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-meta">© 2026 «ТӨБАСЭ ХХК» — Сэмжид Хужирт. Бүх эрх хамгаалагдсан.</p>
+        <p class="footer-meta">Жилийн 4 улиралд нээлттэй</p>
+    </div>
+</footer>
+</body>
+</html>

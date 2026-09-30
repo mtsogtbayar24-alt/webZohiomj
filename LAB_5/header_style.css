@@ -1,0 +1,143 @@
+.top-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-row h6{
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+}
+
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgb(255, 255, 255);
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .3s;
+    border-bottom: 1px solid rgb(241, 245, 249);
+}
+
+.main-header-1{
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header-2{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.main-header-logo{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+}
+
+.main-header-logo-text-1{
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(10, 85, 89);
+    line-height: 1.25;
+}
+
+.main-header-logo-text-2{
+    font-size: 9px;
+    color: rgb(148, 163, 184);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.main-header-menu{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-header-menu-item{
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .15s ease;
+    color: rgb(13, 115, 119);
+    font-weight: 600;
+    border-bottom: 2px solid rgb(13, 115, 119);
+    padding-bottom: .125rem;
+}
+
+.main-header-menu-item:hover{
+    color: rgb(10, 85, 89);
+}
+
+.main-header-menu-item-disabled{
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .15s ease;
+    color: rgb(106, 106, 106);
+    padding-bottom: .125rem;
+}
+
+.main-header-menu-item-disabled:hover{
+    color: rgb(13, 115, 119);
+}
+
+.main-header-menu-language{
+    display: flex;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: .25rem;
+    overflow: hidden;
+    font-size: 11px;
+}
+
+.main-header-menu-language-btn1{
+    padding: .375rem .75rem;
+    transition: .15s;
+    background-color: rgb(13, 115, 119);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.main-header-menu-language-btn1:hover{
+    background-color: rgb(10, 85, 89);
+}
+
+.main-header-menu-language-btn2{
+    padding: .375rem .75rem;
+    transition: .15s;
+    color: rgb(71, 85, 105);
+    border: none;
+    background: white;
+}
+
+.main-header-menu-language-btn2:hover{
+    background-color: rgb(241, 245, 249);
+}
+
+.main-header-menu-last-item{
+    font-size: 12px;
+    font-weight: 500;
+    background-color: rgb(13, 115, 119);
+    color: rgb(255, 255, 255);
+    padding: .5rem 1.25rem;
+    border-radius: .375rem;
+    text-decoration: none;
+    transition: .15s;
+}
+
+.main-header-menu-last-item:hover{
+    background-color: rgb(10, 85, 89);
+}

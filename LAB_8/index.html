@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Миний CV - lab8</title>
+<script src="cv.js" defer></script>
+</head>
+<body>
+<h3>Миний танилцуулга</h3>
+<hr>
+<table border="1" width="100%">
+<form name="My CV" action="success.html" method="POST">
+<tr>
+<td rowspan=12 align="center">
+<label for="myphoto">Цээж зургаа оруулна уу:</label>
+<input type="file" id="myphoto" name="myphoto"><br><br></td>
+<td><b>Оюутны код:</b></td>
+<td colspan=2><input type="text" id="student_code" name="student_code" value="B242270128"></td>
+</tr>
+<tr>
+<td><b>Салбар:</b></td>
+<td colspan=2>
+<select id="salbar" name="salbar">
+<option value="KUTenhim">Компьютерийн ухааны тэнхим</option>
+<option value="MTtenhim">Мэдээллийн технологийн тэнхим</option>
+<option value="HTenhim">Холбооны тэнхим</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><b>Хөтөлбөр:</b></td>
+<td colspan=2>
+<select name="course" id="course">
+<option value="071405">ПРОГРАММ ХАНГАМЖИЙН ИНЖЕНЕРЧЛЭЛ</option>
+<option value="061301">КОМПЬЮТЕРИЙН УХААН</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><b><label>Ургын овог:</label></b></td>
+<td colspan=2><input type="text" id="urgiin_ovog" name="urgiin_ovog" value="Боржигон"></td>
+</tr>
+<tr>
+<td><b><label>Овог:</label></b></td>
+<td colspan=2><input type="text" id="ovog" name="ovog" value="Цэцэнжаргал"></td>
+</tr>
+<tr>
+<td><b><label>Нэр:</label></b></td>
+<td colspan=2><input type="text" id="ner" name="ner" value="Цэндсүрэн"></td>
+</tr>
+<tr>
+<td><b>Нас:</b></td>
+<td colspan=2><input type="number" id="nas" name="nas" value="19" min="0" max="200"></td>
+</tr>
+<tr>
+<td><b>Хүйс:</b></td>
+<td colspan=2>
+<input type="radio" id="gender_er" name="gender" value="er" checked>Эр
+<input type="radio" id="gender_em" name="gender" value="em">Эм
+</td>
+</tr>
+<tr>
+<td><b>Төрсөн огноо:</b></td>
+<td colspan=2><input type="date" id="birthday" name="birthday" value="2006-04-18"></td>
+</tr>
+<tr>
+<td><b>Утас:</b></td>
+<td colspan=2><input type="tel" id="phone_number" name="phone_number" value="976-80308283"></td>
+</tr>
+<tr>
+<td><b>Email:</b></td>
+<td colspan=2><input type="email" id="email_address" name="email_address" value="tsekvv2006@gmail.com"></td>
+</tr>
+<tr>
+<td><b>Facebook хаяг:</b></td>
+<td colspan=2><input type="url" id="social_address" name="facebook" value="https://www.facebook.com/tsekvv.tsekvv.142"></td>
+</tr>
+<tr>
+<td align="center"><b>Гэрийн хаяг:</b></td>
+<td colspan=3>
+<textarea id="geriin_hayg" name="geriin_hayg" style="width:100%" onchange="validateText(this, 'geriin_hayg')">Өвөрхангай аймаг, Хужирт сум, 5-р баг, Шунхлай, 1-0</textarea></td>
+</tr>
+<tr>
+<td colspan=4 align="center" ><b>Нэмэлт мэдээлэл</b></td>
+</tr>
+<tr>
+<td rowspan="3" align="center"><b>Боловсрол:</b></td>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol_baga" name="bolovsrol" value="baga" checked> Бага <br>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol_suuri" name="bolovsrol" value="suuri" checked> Суурь <br>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol_bvren" name="bolovsrol" value="bvren_dund" checked> Бүрэн дунд <br>
+</td>
+</tr>
+<tr>
+<td rowspan="2" align="center"><b>Садан төрлийн байдал:</b></td>
+<td>
+<select id="sadan_torol_1" name="sadan1">
+<option value="eej" selected>Ээж</option>
+<option value="aav">Аав</option>
+<option value="duu">Дүү</option>
+<option value="egch">Эгч</option>
+<option value="ah">Ах</option>
+</select>
+</td>
+<td colspan=2>
+<input type="text" id="ner1" name="ner1" value="Үүрцайх">
+</td>
+</tr>
+<tr>
+<td>
+<select id="sadan_torol_2" name="sadan2">
+<option value="eej">Ээж</option>
+<option value="aav">Аав</option>
+<option value="duu" selected>Дүү</option>
+<option value="egch">Эгч</option>
+<option value="ah">Ах</option>
+</select>
+</td>
+<td colspan=2>
+<input type="text" id="ner_2" name="ner2" value="Дэлгэрсүрэн">
+</td>
+</tr>
+<tr>
+<td rowspan="5" align="center"><b>Ур чадвар:</b></td>
+<td>
+<select id="skill1" name="skill1">
+<option value="microsoft_office" selected>Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter &amp; Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level1" name="level1">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill2" name="skill2">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp" selected>C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter &amp; Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level2" name="level2">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill3" name="skill3">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python" selected>Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter &amp; Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level3" name="level3">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill4" name="skill4">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart" selected>Flutter &amp; Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level4" name="level4">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill5" name="skill5">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter &amp; Dart</option>
+<option value="react_ts" selected>React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level5" name="level5">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="13" align="center"><b>Хэлний чадвар:</b></td>
+<tr>
+<td rowspan="3">Монгол</td>
+<td>Унших</td>
+<td>
+<select id="mongol_unshih" name="mongol_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="mongol_yarih" name="mongol_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="mongol_bichih" name="mongol_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Англи</td>
+<td>Унших</td>
+<td>
+<select id="english_unshih" name="english_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="english_yarih" name="english_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="english_bichih" name="english_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Орос</td>
+<td>Унших</td>
+<td>
+<select id="oros_unshih" name="oros_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="oros_yarih" name="oros_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="oros_bichih" name="oros_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Хятад</td>
+<td>Унших</td>
+<td>
+<select id="khyatad_unshih" name="khyatad_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="khyatad_yarih" name="khyatad_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="khyatad_bichih" name="khyatad_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu" selected>Муу</option>
+</select>
+</td>
+</tr>
+</tr>
+<tr>
+<td rowspan=5 align="center"><b>Хобби:</b></td>
+<td colspan=3><input type="checkbox" id="hobby_nom" name="hobby" value="nom_unshih" checked> Ном унших</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby_uul" name="hobby" value="uuland_alkhah">Ууланд алхах</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby_shuleg" name="hobby" value="shuleg_bichih" checked>Шүлэг бичих</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby_duu" name="hobby" value="duu_sonsoh">Дуу сонсох</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby_togloom" name="hobby" value="togloom" checked>Оюун ухааны тоглоом тоглох</td>
+</tr>
+<tr>
+<td rowspan=2 align="center"><b>Авъяас, чадвар:</b></td>
+<td colspan=3><input type="checkbox" id="talent_hool" name="talent" value="hool_hiih">Хоол хийх</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="talent_shuleg" name="talent" value="shuleg_bichih" checked>Шүлэг бичих</td>
+</tr>
+<tr>
+<td rowspan="4" align="center"><b>Шагнал урамшуулал:</b></td>
+<td><input type="text" id="award_type1" name="award_type1" value="МСХ"></td>
+<td colspan=2><input type="text" id="award1" name="award1" value="Шилдэг төгсөгч"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type2" name="award_type2" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award2" name="award2" value="Улсын олимпиадын 1-н даваа тэргүүн байр 2023, 2024"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type3" name="award_type3" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award3" name="award3" value="Улсын олимпиадын 2-н даваа тэргүүн байр 2023, 2024"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type4" name="award_type4" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award4" name="award4" value="Улсын олимпиадын 3-н даваа тусгай байр 2024"></td>
+</tr>
+</table>
+
+<h3>2025-2026 оны 2-р улирал. Хичээл сонголт №1</h3>
+<hr>
+<table id="lesson_table1" border="1" width="100%" cellspacing="10">
+<tr>
+<td align="center"><b>№</b></td>
+<td align="center"><b>Хичээлийн код</b></td>
+<td align="center"><b>Хичээлийн нэр</b></td>
+<td align="center"><b>Кредит</b></td>
+<td align="center"><b>Орох хэлбэр</b></td>
+</tr>
+<tr id="selector_row">
+<td></td>
+<td>
+<select id="lesson_code1" name="lesson_code1" style="width:100%">
+<option value="F.ITM202">F.ITM202</option>
+<option value="F.CSA311">F.CSA311</option>
+<option value="F.ITM207">F.ITM207</option>
+<option value="F.CSM303">F.CSM303</option>
+<option value="S.EPM301">S.EPM301</option>
+<option value="F.ITM237">F.ITM237</option>
+<option value="S.MTM132">S.MTM132</option>
+</select>
+</td>
+<td>
+<select id="lesson_name1" name="lesson_name1" style="width:100%">
+<option value="Веб зохиомж">Веб зохиомж</option>
+<option value="Программ хангамжийн бүтээлт">Программ хангамжийн бүтээлт</option>
+<option value="Хүн ба компьютерийн харилцааны зохиомж">Хүн ба компьютерийн харилцааны зохиомж</option>
+<option value="Хиймэл оюуны орчин үеийн аргууд">Хиймэл оюуны орчин үеийн аргууд</option>
+<option value="Тусгай зориулалтын англи хэл">Тусгай зориулалтын англи хэл</option>
+<option value="Өгөгдлийн сангийн удирдлага">Өгөгдлийн сангийн удирдлага</option>
+<option value="Математик 2С">Математик 2С</option>
+</select>
+</td>
+<td>
+<select id="lesson_credit1" name="lesson_credit1" style="width:100%">
+<option value="5">5</option>
+<option value="4">4</option>
+<option value="3">3</option>
+<option value="2">2</option>
+<option value="1">1</option>
+</select>
+</td>
+<td>
+<select id="lesson_method1" name="lesson_method1" style="width:100%">
+<option value="Лекц, Лаборатор">Лекц, Лаборатор</option>
+<option value="Лекц, Семинар">Лекц, Семинар</option>
+<option value="Лекц, Семинар, Лаборатор">Лекц, Семинар, Лаборатор</option>
+<option value="Практик">Практик</option>
+</select>
+</td>
+</tr>
+</table>
+<h3>2025-2026 оны 2-р улирал. Хичээл сонголт №2</h3>
+<hr>
+<table border="1" width="100%" id="lesson_table2">
+<tr>
+<td align="center"><b>№</b></td>
+<td align="center"><b>Хичээлийн код, нэр</b></td>
+<td align="center"><b>Багш</b></td>
+<td align="center"><b>Лекц</b></td>
+<td align="center"><b>Лаб/Сем</b></td>
+</tr>
+</table>
+<br><br>
+</form>
+</body>
+</html>

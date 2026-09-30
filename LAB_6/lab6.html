@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab4</title>
+<style>
+.svg{
+width: 100%;
+max-width: 100%;
+height: auto;
+display: block;
+margin-bottom: 20px;
+}
+
+/* Анимешнүүд */
+
+.cloud1 {
+  animation: cloudMove1 18s linear infinite alternate;
+}
+.cloud2 {
+  animation: cloudMove2 22s linear infinite alternate;
+}
+.cloud3 {
+  animation: cloudMove3 20s linear infinite alternate;
+}
+
+.bird1 {
+  animation: birdFly1 6s ease-in-out infinite;
+}
+.bird2 {
+  animation: birdFly2 7s ease-in-out infinite;
+}
+
+.tree {
+  transform-origin: bottom center;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.bush {
+  transform-origin: bottom center;
+  animation: swaySmall 2.5s ease-in-out infinite;
+}
+
+.redCar {
+  animation: moveRedCar 10s linear infinite;
+}
+
+.blueCar {
+  animation: moveBlueCar 10s linear infinite;
+}
+
+.lampLight {
+  animation: lampBlink 2s ease-in-out infinite;
+}
+
+.skyDay {
+  animation: skyToNight 16s ease-in-out infinite;
+}
+
+.sun {
+  transform: translateX(0px) translateY(150px);
+  animation: sunCycle 16s linear infinite;
+  opacity: 1;
+}
+
+.moon {
+  transform: translateX(0px) translateY(150px);
+  animation: moonCycle 16s linear infinite;
+  opacity: 0;
+}
+
+.windowLight {
+  animation: windowNightLight 16s ease-in-out infinite;
+}
+
+.lampNight {
+  animation: lampNightGlow 16s ease-in-out infinite;
+}
+
+@keyframes sunCycle {
+  0%   { transform: translateX(0px) translateY(150px); opacity: 1; }
+  25%  { transform: translateX(450px) translateY(50px); opacity: 1; }
+  50%  { transform: translateX(900px) translateY(150px); opacity: 0; }
+  100% { transform: translateX(0px) translateY(150px); opacity: 0; }
+}
+
+@keyframes moonCycle {
+  0%   { transform: translateX(0px) translateY(150px); opacity: 0; }
+  50%  { transform: translateX(0px) translateY(150px); opacity: 1; }
+  75%  { transform: translateX(450px) translateY(50px); opacity: 1; }
+  100% { transform: translateX(900px) translateY(150px); opacity: 0; }
+}
+
+@keyframes cloudMove1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(30px); }
+}
+
+@keyframes cloudMove2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25px); }
+}
+
+@keyframes cloudMove3 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+@keyframes birdFly1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(18px, -8px); }
+}
+
+@keyframes birdFly2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, -6px); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes swaySmall {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes moveRedCar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(900px); }
+}
+
+@keyframes moveBlueCar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-900px); }
+}
+
+@keyframes lampBlink {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes skyToNight {
+  0%   { fill: #87CEEB; }
+  25%  { fill: #4FC3F7; }
+  50%  { fill: #FFB74D; }
+  75%  { fill: #1A237E; }
+  100% { fill: #87CEEB; }
+}
+
+@keyframes windowNightLight {
+  0%, 55% {
+    fill: #B3E5FC;
+    opacity: 1;
+  }
+  70%, 90% {
+    fill: #FFF176;
+    opacity: 1;
+  }
+  100% {
+    fill: #B3E5FC;
+    opacity: 1;
+  }
+}
+
+@keyframes lampNightGlow {
+  0%, 55% {
+    opacity: 0.3;
+  }
+  70%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Хотын гудамж</h1>
+<!-- SVG зураг -->
+<svg class="svg" viewBox="0 0 900 600">
+<!-- Тэнгэр -->
+<rect class="skyDay" width="900" height="600" fill="#4FC3F7"/>
+
+<!-- Нар -->
+<g class="sun">
+  <circle r="36" fill="#FFEE58"/>
+</g>
+
+<!-- Сар -->
+<g class="moon">
+  <circle r="28" fill="#F5F5F5"/>
+</g>
+
+<!-- Уулс -->
+<polygon points="0,200 100,100 200,160 300,80 420,170 500,220" fill="#7b4a1e"/>
+<polygon points="380,220 480,110 580,180 680,90 800,160 900,130 900,230 380,230" fill="#8b5e2a"/>
+
+<!-- Үүлнүүд -->
+<g class="cloud1">
+<ellipse cx="130" cy="55" rx="65" ry="22" fill="white" opacity="0.95"/>
+<ellipse cx="95" cy="62" rx="48" ry="18" fill="white" opacity="0.95"/>
+<ellipse cx="168" cy="62" rx="44" ry="17" fill="white" opacity="0.95"/>
+</g>
+<g class="cloud2">
+<ellipse cx="380" cy="80" rx="58" ry="20" fill="white" opacity="0.9"/>
+<ellipse cx="345" cy="87" rx="42" ry="17" fill="white" opacity="0.9"/>
+<ellipse cx="415" cy="87" rx="48" ry="19" fill="white" opacity="0.9"/>
+</g>
+<g class="cloud3">
+<ellipse cx="600" cy="45" rx="50" ry="18" fill="white" opacity="0.85"/>
+<ellipse cx="570" cy="52" rx="38" ry="15" fill="white" opacity="0.85"/>
+<ellipse cx="630" cy="52" rx="40" ry="16" fill="white" opacity="0.85"/>
+</g>
+
+<!-- Шувуунууд -->
+<g class="bird1">
+<path d="M200 95 Q207 88 214 95" stroke="#546E7A" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M220 85 Q228 78 236 85" stroke="#546E7A" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<g class="bird2">
+<path d="M490 60 Q497 54 504 60" stroke="#78909C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M510 55 Q516 49 522 55" stroke="#78909C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</g>
+
+<!-- Газар -->
+<rect y="270" width="900" height="360" fill="#558B2F"/>
+
+<!-- 2 урсгалт зам -->
+<rect y="350" width="900" height="170" fill="#2A2A2A"/>
+<rect y="350" width="900" height="6" fill="#E0E0E0"/>
+<rect y="520" width="900" height="6" fill="#E0E0E0"/>
+
+<!-- Дундын шар тасархай зураас -->
+<rect x="47" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="147" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="247" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="347" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="447" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="547" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="647" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="747" y="435" width="35" height="8" fill="#FDD835"/>
+<rect x="847" y="435" width="35" height="8" fill="#FDD835"/>
+
+<!-- Байшин 1 -->
+<rect x="10" y="170" width="145" height="120" fill="#EF9A9A" stroke="#C62828" stroke-width="2"/>
+<polygon points="5,170 82,110 155,170" fill="#B71C1C"/>
+<rect x="57" y="240" width="28" height="50" rx="3" fill="#5D4037"/>
+<circle cx="64" cy="266" r="3" fill="#FFD700"/>
+<rect class="windowLight" x="18" y="190" width="35" height="32" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="35" y1="190" x2="35" y2="222" stroke="#555" stroke-width="1.5"/>
+<line x1="18" y1="206" x2="53" y2="206" stroke="#555" stroke-width="1.5"/>
+<rect class="windowLight" x="100" y="190" width="35" height="32" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="117" y1="190" x2="117" y2="222" stroke="#555" stroke-width="1.5"/>
+<line x1="100" y1="206" x2="135" y2="206" stroke="#555" stroke-width="1.5"/>
+<rect x="30" y="228" width="85" height="12" rx="3" fill="#E53935"/>
+<text x="72" y="238" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif" font-weight="bold">ДЭЛГҮҮР</text>
+
+<!-- Байшин 2 -->
+<rect x="250" y="210" width="70" height="80" fill="#CE93D8" stroke="#7B1FA2" stroke-width="2"/>
+<polygon points="250,210 285,175 320,210" fill="#9C27B0"/>
+<rect x="275" y="250" width="20" height="40" rx="2" fill="#5D4037"/>
+<rect class="windowLight" x="290" y="218" width="22" height="20" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="301" y1="218" x2="301" y2="238" stroke="#555" stroke-width="1.5"/>
+<rect class="windowLight" x="260" y="218" width="22" height="20" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="271" y1="218" x2="271" y2="238" stroke="#555" stroke-width="1.5"/>
+
+<!-- Байшин 3 -->
+<rect x="755" y="155" width="115" height="135" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
+<rect x="750" y="150" width="125" height="10" fill="#BF360C"/>
+<rect class="windowLight" x="768" y="168" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="800" y="168" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="832" y="168" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="768" y="196" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="800" y="196" width="25" height="20" rx="1" fill="#FFF59D" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="832" y="196" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="768" y="224" width="25" height="20" rx="1" fill="#FFF59D" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="800" y="224" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect class="windowLight" x="832" y="224" width="25" height="20" rx="1" fill="#B3E5FC" stroke="#555" stroke-width="1"/>
+<rect x="800" y="255" width="30" height="35" rx="2" fill="#5D4037"/>
+<rect class="windowLight" x="805" y="260" width="8" height="20" rx="1" fill="#B3E5FC" opacity="0.7"/>
+<rect class="windowLight" x="817" y="260" width="8" height="20" rx="1" fill="#B3E5FC" opacity="0.7"/>
+
+<!-- Байшин 4 -->
+<rect x="600" y="215" width="85" height="75" fill="#A5D6A7" stroke="#2E7D32" stroke-width="2"/>
+<polygon points="600,215 642,178 685,215" fill="#388E3C"/>
+<rect x="630" y="248" width="22" height="42" rx="2" fill="#5D4037"/>
+<circle cx="635" cy="270" r="2.5" fill="#FFD700"/>
+<rect class="windowLight" x="610" y="222" width="22" height="20" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="621" y1="222" x2="621" y2="242" stroke="#555" stroke-width="1.5"/>
+<rect class="windowLight" x="655" y="222" width="22" height="20" rx="2" fill="#B3E5FC" stroke="#333" stroke-width="1.5"/>
+<line x1="666" y1="222" x2="666" y2="242" stroke="#555" stroke-width="1.5"/>
+
+  <!-- Гудамжны дэнлүүнүүд -->
+<rect x="20" y="270" width="6" height="80" fill="#607D8B" rx="2"/>
+<ellipse class="lampLight lampNight" cx="22" cy="271" rx="14" ry="7" fill="#FFF9C4" opacity="0.9"/>
+<circle class="lampLight lampNight" cx="22" cy="271" r="5" fill="#FDD835"/>
+
+<rect x="450" y="270" width="6" height="80" fill="#607D8B" rx="2"/>
+<ellipse class="lampLight lampNight" cx="452" cy="271" rx="14" ry="7" fill="#FFF9C4" opacity="0.9"/>
+<circle class="lampLight lampNight" cx="452" cy="271" r="5" fill="#FDD835"/>
+
+<rect x="880" y="270" width="6" height="80" fill="#607D8B" rx="2"/>
+<ellipse class="lampLight lampNight" cx="882" cy="271" rx="14" ry="7" fill="#FFF9C4" opacity="0.9"/>
+<circle class="lampLight lampNight" cx="882" cy="271" r="5" fill="#FDD835"/>
+
+<!-- Модод -->
+<g class="tree">
+<rect x="140" y="298" width="14" height="50" fill="#795548"/>
+<circle cx="147" cy="288" r="28" fill="#2E7D32"/>
+<circle cx="135" cy="298" r="18" fill="#388E3C"/>
+<circle cx="162" cy="295" r="20" fill="#33691E"/>
+</g>
+
+<g class="tree">
+<rect x="300" y="305" width="12" height="45" fill="#795548"/>
+<circle cx="306" cy="295" r="22" fill="#1B5E20"/>
+<circle cx="294" cy="302" r="15" fill="#2E7D32"/>
+</g>
+
+<g class="tree">
+<rect x="570" y="295" width="14" height="55" fill="#795548"/>
+<circle cx="577" cy="283" r="30" fill="#2E7D32"/>
+<circle cx="562" cy="294" r="19" fill="#33691E"/>
+<circle cx="548" cy="290" r="22" fill="#388E3C"/>
+</g>
+
+<g class="tree">
+<rect x="730" y="298" width="12" height="50" fill="#6D4C41"/>
+<circle cx="736" cy="290" r="24" fill="#388E3C"/>
+<circle cx="750" cy="298" r="16" fill="#2E7D32"/>
+</g>
+
+<!-- Цэцэгт бутнууд -->
+<g class="bush">
+<rect x="220" y="320" width="10" height="25" fill="#795548"/>
+<circle cx="225" cy="315" r="14" fill="#E53935"/>
+<circle cx="217" cy="320" r="10" fill="#EF9A9A"/>
+<circle cx="233" cy="320" r="10" fill="#C62828"/>
+</g>
+
+<g class="bush">
+<rect x="650" y="318" width="10" height="25" fill="#795548"/>
+<circle cx="655" cy="313" r="13" fill="#FF7043"/>
+<circle cx="647" cy="320" r="9" fill="#FFAB91"/>
+<circle cx="664" cy="319" r="10" fill="#E64A19"/>
+</g>
+
+<!-- Явган хүний зам -->
+<rect x="450" y="350" width="70" height="176" fill="#1A1A1A" opacity="0.5"/>
+<rect x="450" y="360" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="380" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="400" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="420" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="440" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="460" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="480" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+<rect x="450" y="500" width="70" height="10" fill="#EEEEEE" opacity="0.8"/>
+
+<!-- Цэнхэр машин (зүүн чиглэл) -->
+<g class="blueCar">
+<rect x="692" y="366" width="148" height="44" rx="8" fill="#42A5F5"/>
+<rect x="725" y="338" width="105" height="36" rx="8" fill="#42A5F5"/>
+<rect x="730" y="342" width="42" height="26" rx="4" fill="#E3F2FD" opacity="0.9"/>
+<rect x="777" y="342" width="44" height="26" rx="4" fill="#E3F2FD" opacity="0.9"/>
+<ellipse cx="692" cy="380" rx="10" ry="7" fill="#FFEE58" opacity="0.95"/>
+<ellipse cx="692" cy="380" rx="6" ry="4" fill="white"/>
+<ellipse cx="840" cy="382" rx="9" ry="6" fill="#FF1744" opacity="0.9"/>
+<circle cx="722" cy="410" r="21" fill="#212121"/>
+<circle cx="722" cy="410" r="15" fill="#424242"/>
+<circle cx="722" cy="410" r="7" fill="#9E9E9E"/>
+<circle cx="809" cy="410" r="21" fill="#212121"/>
+<circle cx="809" cy="410" r="15" fill="#424242"/>
+<circle cx="809" cy="410" r="7" fill="#9E9E9E"/>
+</g>
+
+<!-- Улаан машин (баруун чиглэл) -->
+<g class="redCar">
+<rect x="60" y="450" width="144" height="42" rx="8" fill="#FF5252"/>
+<rect x="70" y="422" width="100" height="36" rx="8" fill="#FF5252"/>
+<rect x="79" y="426" width="40" height="26" rx="4" fill="#B3E5FC" opacity="0.85"/>
+<rect x="125" y="426" width="40" height="26" rx="4" fill="#B3E5FC" opacity="0.85"/>
+<ellipse cx="204" cy="464" rx="10" ry="7" fill="#FFEE58" opacity="0.95"/>
+<ellipse cx="204" cy="464" rx="6" ry="4" fill="white"/>
+<ellipse cx="60" cy="464" rx="9" ry="6" fill="#FF1744" opacity="0.9"/>
+<circle cx="92" cy="492" r="20" fill="#212121"/>
+<circle cx="92" cy="492" r="14" fill="#424242"/>
+<circle cx="92" cy="492" r="7" fill="#9E9E9E"/>
+<circle cx="172" cy="492" r="20" fill="#212121"/>
+<circle cx="172" cy="492" r="14" fill="#424242"/>
+<circle cx="172" cy="492" r="7" fill="#9E9E9E"/>
+</g>
+</svg>
+</body>
+</html>

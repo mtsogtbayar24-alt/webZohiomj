@@ -1,0 +1,764 @@
+<html>
+<head>
+<title> Миний CV
+</title>
+</head>
+
+<body>
+<h3>Миний танилцуулга</h3>
+<hr>
+<table border="1" width="100%">
+<form name="My CV" action="success.html" method="POST">
+<tr>
+<td rowspan=12 align="center">
+<label for="myphoto">Цээж зургаа оруулна уу:</label>
+<input type="file" id="myphoto" name="myphoto"><br><br></td>
+<td><b>Оюутны код:</b></td>
+<td colspan=2><input type="text" id="student_code" name="student_code" value="B242270128"></td>
+</tr>
+<tr>
+<td><b>Салбар:</b></td>
+<td colspan=2>
+<select id="salbar" name="salbar">
+<option value="KUTenhim">Компьютерийн ухааны тэнхим</option>
+<option value="MTtenhim">Мэдээллийн технологийн тэнхим</option>
+<option value="HTenhim">Холбооны тэнхим</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><b>Хөтөлбөр:</b></td>
+<td colspan=2>
+<select name="course" id="course">
+<option value="071405">ПРОГРАММ ХАНГАМЖИЙН ИНЖЕНЕРЧЛЭЛ</option>
+<option value="061301">КОМПЬЮТЕРИЙН УХААН</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><b><label>Ургын овог:</label></b></td>
+<td colspan=2><input type="text" id="urgiin_ovog" name="urgiin_ovog" value="Боржигон"></td>
+</tr>
+<tr>
+<td><b><label>Овог:</label></b></td>
+<td colspan=2><input type="text" id="ovog" name="ovog" value="Цэцэнжаргал"></td>
+</tr>
+<tr>
+<td><b><label>Нэр:</label></b></td>
+<td colspan=2><input type="text" id="ner" name="ner" value="Цэндсүрэн"></td>
+</tr>
+<tr>
+<td><b>Нас:</b></td>
+<td colspan=2><input type="number" id="nas" name="nas" value="19" min="0" max="200"></td>
+</tr>
+<tr>
+<td><b>Хүйс:</b></td>
+<td colspan=2>
+<input type="radio" id="gender" name="gender" value="er">Эр
+<input type="radio" id="gender" name="gender" value="em">Эм
+</td>
+</tr>
+<tr>
+<td><b>Төрсөн огноо:</b></td>
+<td colspan=2><input type="date" id="birthday" name="birthday" value="2006-04-18"></td>
+</tr>
+<tr>
+<td><b>Утас:</b></td>
+<td colspan=2><input type="tel" id="phone_number" name="phone_number" value="976-80308283"></td>
+</tr>
+<tr>
+<td><b>Email:</b></td>
+<td colspan=2><input type="email" id="email_address" name="email_address" value="tsekvv2006@gmail.com"></td>
+</tr>
+<tr>
+<td><b>Facebook хаяг:</b></td>
+<td colspan=2><input type="url" id="social_address" name="facebook" value="https://www.facebook.com/tsekvv.tsekvv.142"></td>
+</tr>
+<tr>
+<td align="center"><b>Гэрийн хаяг:</b></td>
+<td colspan=3>
+<textarea id="geriin_hayg"  name="geriin_hayg" style="width:100%">Өвөрхангай аймаг, Хужирт сум, 5-р баг, Шунхлай, 1-0</textarea></td>
+</tr>
+<tr>
+<td colspan=4 align="center" ><b>Нэмэлт мэдээлэл</b></td>
+</tr>
+<tr>
+<td rowspan="3" align="center"><b>Боловсрол:</b></td>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol" name="bolovsrol" value="baga" checked> Бага <br>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol" name="bolovsrol" value="suuri" checked> Суурь <br>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<input type="checkbox" id="bolovsrol" name="bolovsrol" value="bvren_dund" checked> Бүрэн дунд <br>
+</td>
+</tr>
+<tr>
+<td rowspan="2" align="center"><b>Садан төрлийн байдал:</b></td>
+<td>
+<select id="sadan_torol_1" name="sadan1">
+<option value="eej" selected>Ээж</option>
+<option value="aav">Аав</option>
+<option value="duu">Дүү</option>
+<option value="egch">Эгч</option>
+<option value="ah">Ах</option>
+</select>
+</td>
+<td colspan=2>
+<input type="text" id="ner1" name="ner1" value="Үүрцайх">
+</td>
+</tr>
+<tr>
+<td>
+<select id="sadan_torol_2" name="sadan2">
+<option value="eej">Ээж</option>
+<option value="aav">Аав</option>
+<option value="duu" selected>Дүү</option>
+<option value="egch">Эгч</option>
+<option value="ah">Ах</option>
+</select>
+</td>
+<td colspan=2>
+<input type="text" id="ner_2" name="ner2" value="Дэлгэрсүрэн">
+</td>
+</tr>
+<tr>
+<td rowspan="5" align="center"><b>Ур чадвар:</b></td>
+<td>
+<select id="skill1" name="skill1">
+<option value="microsoft_office" selected>Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter & Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level1" name="level1">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill2" name="skill2">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp" selected>C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter & Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level2" name="level2">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill3" name="skill3">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python" selected>Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter & Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level3" name="level3">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill4" name="skill4">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart" selected>Flutter & Dart</option>
+<option value="react_ts">React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level4" name="level4">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select id="skill5" name="skill5">
+<option value="microsoft_office">Microsoft Office</option>
+<option value="cpp_csharp">C++, C#</option>
+<option value="java_js_python">Java, JavaScript, Python</option>
+<option value="flutter_dart">Flutter & Dart</option>
+<option value="react_ts" selected>React Native, TypeScript</option>
+</select>
+</td>
+<td colspan=2>
+<select id="level5" name="level5">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="13" align="center"><b>Хэлний чадвар:</b></td>
+<tr>
+<td rowspan="3">Монгол</td>
+<td>Унших</td>
+<td>
+<select id="mongol_unshih" name="mongol_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="mongol_yarih" name="mongol_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="mongol_bichih" name="mongol_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Англи</td>
+<td>Унших</td>
+<td>
+<select id="english_unshih" name="english_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="english_yarih" name="english_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="english_bichih" name="english_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Орос</td>
+<td>Унших</td>
+<td>
+<select id="oros_unshih" name="oros_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain" selected>Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="oros_yarih" name="oros_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="oros_bichih" name="oros_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td rowspan="3">Хятад</td>
+<td>Унших</td>
+<td>
+<select id="khyatad_unshih" name="khyatad_unshih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Ярих</td>
+<td>
+<select id="khyatad_yarih" name="khyatad_yarih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund" selected>Дунд</option>
+<option value="muu">Муу</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Бичих</td>
+<td>
+<select id="khyatad_bichih" name="khyatad_bichih">
+<option value="mash_sain">Маш сайн</option>
+<option value="sain">Сайн</option>
+<option value="dund">Дунд</option>
+<option value="muu" selected>Муу</option>
+</select>
+</td>
+</tr>
+</tr>
+<tr>
+<td rowspan=5 align="center"><b>Хобби:</b></td>
+<td colspan=3><input type="checkbox" id="hobby" name="hobby" value="nom_unshih" checked> Ном унших</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby" name="hobby" value="uuland_alkhah" >Ууланд алхах</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby" name="hobby" value="shuleg_bichih" checked>Шүлэг бичих</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby" name="hobby" value="duu_sonsoh" >Дуу сонсох</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="hobby" name="hobby" value="togloom" checked>Оюун ухааны тоглоом тоглох</td>
+</tr>
+<tr>
+<td rowspan=2, align="center"><b>Авъяас, чадвар:</b></td>
+<td colspan=3><input type="checkbox" id="talent" name="talent" value="hool_hiih" >Хоол хийх</td>
+</tr>
+<tr>
+<td colspan=3><input type="checkbox" id="talent" name="talent" value="shuleg_bichih" checked>Шүлэг бичих</td>
+</tr>
+<tr>
+<td rowspan="4" align="center"><b>Шагнал урамшуулал:</b></td>
+<td><input type="text" id="award_type1" name="award_type1" value="МСХ"></td>
+<td colspan=2><input type="text" id="award1" name="award1" value="Шилдэг төгсөгч"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type2" name="award_type2" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award2" name="award2" value="Улсын олимпиадын 1-н даваа тэргүүн байр 2023, 2024"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type3" name="award_type3" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award3" name="award3" value="Улсын олимпиадын 2-н даваа тэргүүн байр 2023, 2024"></td>
+</tr>
+<tr>
+<td><input type="text" id="award_type4" name="award_type4" value="Монгол Мэдээлэл Зүйн Олимпиадын Хороо"></td>
+<td colspan=2><input type="text" id="award4" name="award4" value="Улсын олимпиадын 3-н даваа тусгай байр 2024"></td>
+</tr>
+</table>
+
+<h3>2025-2026 оны 2-р улирал. Хичээл сонголт №1</h3>
+<hr>
+<table border="1" width="100%" cellspacing="10">
+<tr>
+<td align="center"><b>№</b></td>
+<td align="center"><b>Хичээлийн код</b></td>
+<td align="center"><b>Хичээлийн нэр</b></td>
+<td align="center"><b>Кредит</b></td>
+<td align="center"><b>Орох хэлбэр</b></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<select id="lesson_code1" name="lesson_code1" style="width:100%">
+<option value="F.ITM202" selected>F.ITM202</option>
+<option value="F.CSA311">F.CSA311</option>
+<option value="F.ITM207">F.ITM207</option>
+<option value="F.CSM303">F.CSM303</option>
+<option value="S.EPM301">S.EPM301</option>
+<option value="F.ITM237">F.ITM237</option>
+<option value="S.MTM132">S.MTM132</option>
+</select>
+</td>
+<td>
+<select id="lesson_name1" name="lesson_name1" style="width:100%">
+<option value="Веб зохиомж" selected>Веб зохиомж</option>
+<option value="Программ хангамжийн бүтээлт">Программ хангамжийн бүтээлт</option>
+<option value="Хүн ба компьютерийн харилцааны зохиомж">Хүн ба компьютерийн харилцааны зохиомж</option>
+<option value="Хиймэл оюуны орчин үеийн аргууд">Хиймэл оюуны орчин үеийн аргууд</option>
+<option value="Тусгай зориулалтын англи хэл">Тусгай зориулалтын англи хэл</option>
+<option value="Өгөгдлийн сангийн удирдлага">Өгөгдлийн сангийн удирдлага</option>
+<option value="Математик 2С">Математик 2С</option>
+</select>
+</td>
+<td>
+<select id="lesson_credit1" name="lesson_credit1" style="width:100%">
+<option value="3" selected>3</option>
+<option value="2">2</option>
+<option value="1">1</option>
+</select>
+</td>
+<td>
+<select id="lesson_method1" name="lesson_method1" style="width:100%">
+<option value="Лекц, Лаборатор" selected>Лекц, Лаборатор</option>
+<option value="Лекц, Семинар">Лекц, Семинар</option>
+<option value="Лекц, Семинар, Лаборатор">Лекц, Семинар, Лаборатор</option>
+<option value="Практик">Практик</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>1</td>
+<td>F.ITM202</td>
+<td>Веб зохиомж</td>
+<td>3</td>
+<td>Лекц, Лаборатор</td>
+</tr>
+<tr>
+<td>2</td>
+<td>F.CSA311</td>
+<td>Программ хангамжийн бүтээлт</td>
+<td>3</td>
+<td>Лекц, Лаборатор</td>
+</tr>
+<tr>
+<td>3</td>
+<td>F.ITM207</td>
+<td>Хүн ба компьютерийн харилцааны зохиомж</td>
+<td>3</td>
+<td>Лекц, Семинар</td>
+</tr>
+<tr>
+<td>4</td>
+<td>F.CSM303</td>
+<td>Хиймэл оюуны орчин үеийн аргууд</td>
+<td>3</td>
+<td>Лекц, Лаборатор</td>
+</tr>
+<tr>
+<td>5</td>
+<td>S.EPM301</td>
+<td>Тусгай зориулалтын англи хэл</td>
+<td>2</td>
+<td>Практик</td>
+</tr>
+<tr>
+<td>6</td>
+<td>F.ITM237</td>
+<td>Өгөгдлийн сангийн удирдлага</td>
+<td>3</td>
+<td>Лекц, Лаборатор</td>
+</tr>
+<tr>
+<td>7</td>
+<td>S.MTM132</td>
+<td>Математик 2С</td>
+<td>3</td>
+<td>Лекц, Семинар</td>
+</tr>
+</table>
+
+<h3>2025-2026 оны 2-р улирал. Хичээл сонголт №2</h3>
+<hr>
+<table border="1" width="100%" cellspacing="5">
+<tr>
+<td align="center"><b>№</b></td>
+<td align="center"><b>Хичээлийн код, нэр</b></td>
+<td align="center"><b>Багш</b></td>
+<td align="center"><b>Лекц</b></td>
+<td align="center"><b>Лаб/Сем</b></td>
+</tr>
+<tr>
+<td>1</td>
+<td>F.ITM202 Веб зохиомж</td>
+<td>
+<select id="teacher1" name="teacher1">
+<option value="CSA322" selected>Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222">Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec1" name="lec1">
+<option value="1-1_VI-129т" selected>1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т">4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab1" name="lab1">
+<option value="1-2_VI-121т" selected>1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т">3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>F.CSA311 Программ хангамжийн бүтээлт</td>
+<td>
+<select id="teacher1" name="teacher1">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211" selected>Б.Долгорсүрэн</option>
+<option value="CA222">Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec2" name="lec2">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т" selected>2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т">4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab2" name="lab2">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т" selected>2-3 VI-111т</option>
+<option value="3-4_VI-111т">3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>F.ITM207 Хүн ба компьютерийн харилцааны зохиомж</td>
+<td>
+<select id="teacher3" name="teacher3">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222" selected>Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec3" name="lec3">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т" selected>3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т">4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab3" name="lab3">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т" selected>3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>F.CSM303 Хиймэл оюуны орчин үеийн аргууд</td>
+<td>
+<select id="teacher4" name="teacher4">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222">Г.Ганбат</option>
+<option value="CD22" selected>А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec4" name="lec4">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т" selected>4-4 VI-129т</option>
+<option value="4-6_VI-129т">4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab4" name="lab4">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т">3-4 VI-111т</option>
+<option value="4-5_VI-121т" selected>4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>S.EPM301 Тусгай зориулалтын англи хэл</td>
+<td>
+<select id="teacher5" name="teacher5">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222">Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221" selected>Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec5" name="lec5">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т" selected>4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab5" name="lab5">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т">3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т" selected>5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>6</td>
+<td>F.ITM237 Өгөгдлийн сангийн удирдлага</td>
+<td>
+<select id="teacher6" name="teacher6">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222">Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33" selected>Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec6" name="lec6">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т">4-6 VI-129т</option>
+<option value="5-3_VI-129т" selected>5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab6" name="lab6">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т">3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т" selected>5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>7</td>
+<td>S.MTM132 Математик 2С</td>
+<td>
+<select id="teacher7" name="teacher7">
+<option value="CSA322">Э.Сүх-Очир</option>
+<option value="FA211">Б.Долгорсүрэн</option>
+<option value="CA222" selected>Г.Ганбат</option>
+<option value="CD22">А.Дорж</option>
+<option value="VV2221">Б.Сэрдарям</option>
+<option value="CD33">Т.Амаржаргал</option>
+</select>
+</td>
+<td>
+<select id="lec7" name="lec7">
+<option value="1-1_VI-129т">1-1 VI-129т</option>
+<option value="2-2_VI-129т">2-2 VI-129т</option>
+<option value="3-3_VI-129т">3-3 VI-129т</option>
+<option value="4-4_VI-129т">4-4 VI-129т</option>
+<option value="4-6_VI-129т" selected>4-6 VI-129т</option>
+<option value="5-3_VI-129т">5-3 VI-129т</option>
+</select>
+</td>
+<td>
+<select id="lab7" name="lab7">
+<option value="1-2_VI-121т">1-2 VI-121т</option>
+<option value="2-3_VI-111т">2-3 VI-111т</option>
+<option value="3-4_VI-111т" selected>3-4 VI-111т</option>
+<option value="4-5_VI-121т">4-5 VI-121т</option>
+<option value="5-1_VI-121т">5-1 VI-121т</option>
+<option value="5-4_VI-121т">5-4 VI-121т</option>
+</select>
+</td>
+</tr>
+</table>
+<h4>Мэдээллээ шалгаж баталгаажуулаарай!!!</h4>
+<label for="password">Нууц үг:</label>
+<input type="password" id="password" name="password"><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

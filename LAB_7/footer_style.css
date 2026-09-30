@@ -1,0 +1,173 @@
+.footer-start {
+    background-color: rgb(15 23 42);
+    color: rgb(148 163 184);
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.footer-2 {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-3 {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: hsla(0,0%,100%,.1);
+    border-radius: 9999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.object-contain {
+    object-fit: contain;
+    padding: .25rem;
+}
+
+.title1 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: rgb(255 255 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title2 {
+    font-size: 9px;
+    color: rgb(100 116 139);
+    letter-spacing: .1em;
+}
+
+.desc-text {
+    font-size: 13px;
+    line-height: 1.625;
+    max-width: 20rem;
+    margin-bottom: 1.5rem;
+}
+
+.label-small {
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgb(100 116 139);
+    margin-bottom: 1rem;
+}
+
+.clean-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clean-list > * + * {
+    margin-top: 0.625rem;
+}
+
+.footer-link {
+    font-size: 13px;
+    color: rgb(100 116 139);
+    text-decoration: none;
+    transition: color 0.15s cubic-bezier(.4, 0, .2, 1);
+}
+
+.footer-link:hover {
+    color: rgb(255 255 255);
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.icon-pin {
+    color: rgb(13 115 119);
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.body-small {
+    font-size: 13px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon-phone {
+    color: rgb(13 115 119);
+    flex-shrink: 0;
+}
+
+.contact-link {
+    display: block;
+    font-size: 13px;
+    color: rgb(148 163 184);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+    color: rgb(255 255 255);
+}
+
+.footer-note {
+    font-size: 11px;
+    color: rgb(100 116 139);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgb(30 41 59);
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-meta {
+    font-size: 11px;
+    color: rgb(71 85 105);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-2 {
+        grid-template-columns: 1.3fr 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+    }
+
+    .footer-meta {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-2 {
+        text-align: center;
+    }
+
+    .footer-3 {
+        justify-content: center;
+    }
+}
